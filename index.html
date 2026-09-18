@@ -1,231 +1,138 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
   <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Staruch Victor">
-    <meta name="description" content="Strona z przyzwoitymi dowcipami">
-    <title>Victor Staruch 1kp gr2</title>
+    <meta name="description" content="Demonstracja podstawowego formatowania tekstu HTML">
+    <title>Formatowanie tekstu HTML</title>
     <style>
+      :root {
+        color: #0000cc;
+        background: #d3d3d3;
+        font-family: "Times New Roman", Times, serif;
+      }
+
       body {
-        background-color: lightgreen;
-        color: #17351b;
-        font-family: Arial, sans-serif;
-        margin: 2rem auto;
-        max-width: 900px;
-        padding: 0 1.5rem;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 42px 48px;
+        background: #d3d3d3;
+        color: #0000cc;
+        font-size: 20px;
+        line-height: 1.45;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #0000cc;
+        line-height: 1.15;
       }
 
       h1 {
-        text-align: right;
-      }
-
-      h2 {
-        text-align: left;
-      }
-
-      h3 {
+        margin: 0 0 28px;
+        font-size: clamp(2.35rem, 6vw, 4.5rem);
         text-align: center;
       }
 
-      fieldset {
-        background-color: #eaffea;
-        border: 3px solid #286b32;
-        margin: 1rem 0;
-        padding: 1rem 1.5rem;
+      h2 {
+        margin: 34px 0 14px;
+        font-size: clamp(1.85rem, 4vw, 3rem);
       }
 
-      legend {
-        background-color: #286b32;
-        color: white;
-        padding: 0.35rem 0.75rem;
+      h3 {
+        margin: 26px 0 10px;
+        font-size: clamp(1.4rem, 3vw, 2.15rem);
       }
 
-      .separator-one {
-        border: 0;
-        border-top: 2px solid #1d4ed8;
-        width: 85%;
+      p {
+        margin: 12px 0;
       }
 
-      .separator-two {
-        border: 0;
-        border-top: 5px solid #b91c1c;
-        width: 65%;
+      a {
+        color: #0000ee;
       }
 
-      .separator-three {
-        border: 0;
-        border-top: 8px solid #7e22ce;
-        width: 45%;
+      ul {
+        margin: 8px 0 26px;
+        padding-left: 42px;
       }
 
-      .list-square {
-        list-style-type: square;
+      li {
+        margin: 7px 0;
       }
 
-      .list-disc {
-        list-style-type: disc;
+      code {
+        color: #000099;
+        font-family: "Courier New", monospace;
+        font-size: 0.9em;
       }
 
-      .list-circle {
-        list-style-type: circle;
+      .intro {
+        margin: 0 auto 34px;
+        text-align: center;
       }
 
-      .list-decimal {
-        list-style-type: decimal;
-      }
-
-      .list-alpha {
-        list-style-type: upper-alpha;
-      }
-
-      .list-roman {
-        list-style-type: lower-roman;
-      }
-
-      .nested-level-one {
-        list-style-type: square;
-      }
-
-      .nested-level-two {
-        list-style-type: lower-alpha;
-      }
-
-      .nested-level-three {
-        list-style-type: circle;
+      .example {
+        border-top: 2px solid #888;
+        padding-top: 8px;
       }
     </style>
   </head>
   <body>
-    <!-- Autor: Staruch Victor; szkoła: ZSE; klasa: 1kp gr2. -->
-    <p><strong>Autor:</strong> Staruch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Victor</p>
-
-    <h1>Dowcipy o babie</h1>
-    <fieldset>
-      <legend>Przystanek autobusowy</legend>
-      <p>
-        Na przystanku autobusowym stoi baba z ogromną walizką.
-        Podchodzi do niej kierowca i pyta:<br>
-        – Dokąd pani jedzie?<br>
-        – Do centrum.<br>
-        – To proszę wsiadać, walizkę też jakoś upchniemy!
+    <header>
+      <h1>Formatowanie tekstu HTML</h1>
+      <p class="intro">
+        <a href="#przyklady">Przykłady formatowania tekstu</a>
       </p>
-    </fieldset>
+    </header>
 
-    <hr class="separator-one">
+    <main id="przyklady">
+      <h2>Podstawowe znaczniki tekstowe</h2>
 
-    <h2>Dowcipy szkolne</h2>
-    <fieldset>
-      <legend>Sprawdzian</legend>
+      <ul>
+        <li class="example">
+          <code>&lt;b&gt;</code> — <b>tekst pogrubiony</b>
+        </li>
+        <li class="example">
+          <code>&lt;i&gt;</code> — <i>tekst pochylony</i>
+        </li>
+        <li class="example">
+          <code>&lt;u&gt;</code> — <u>tekst podkreślony</u>
+        </li>
+        <li class="example">
+          <code>&lt;strike&gt;</code> — <strike>tekst przekreślony</strike>
+        </li>
+        <li class="example">
+          <code>&lt;sup&gt;</code> — potęga: 2<sup>3</sup> = 8
+        </li>
+        <li class="example">
+          <code>&lt;sub&gt;</code> — wzór chemiczny: H<sub>2</sub>O
+        </li>
+        <li class="example">
+          <code>&lt;br&gt;</code> — pierwszy wiersz<br>
+          drugi wiersz po złamaniu linii
+        </li>
+        <li class="example">
+          <code>&lt;nobr&gt;</code> —
+          <nobr>Ten tekst pozostaje w jednym wierszu.</nobr>
+        </li>
+        <li class="example">
+          <code>&amp;nbsp;</code> — odstęp nierozdzielający:
+          pierwszy&nbsp;&nbsp;&nbsp;drugi
+        </li>
+      </ul>
+
+      <h2>Przykład łączenia formatowania</h2>
       <p>
-        Nauczyciel pyta ucznia:<br>
-        – Jasiu, dlaczego spóźniłeś się do szkoły?<br>
-        – Bo na ulicy był znak: „Uwaga, szkoła – zwolnij”.
+        <b>HTML</b> pozwala wyróżnić ważne informacje, zastosować
+        <i>pochylenie</i> oraz dodać <u>podkreślenie</u> w jednym akapicie.
       </p>
-    </fieldset>
 
-    <hr class="separator-two">
-
-    <h3>Dowcipy o informatyce</h3>
-    <fieldset>
-      <legend>Komputer</legend>
+      <h3>Informacja</h3>
       <p>
-        Tata pyta syna:<br>
-        – Dlaczego wyłączyłeś komputer?<br>
-        – Bo chciałem sprawdzić, czy naprawdę odpoczywa, kiedy nic nie robi.
+        Każdy przykład został zapisany w języku polskim i przedstawia efekt
+        działania odpowiedniego znacznika HTML.
       </p>
-    </fieldset>
-
-    <hr class="separator-three">
-
-    <section aria-labelledby="listy-informatyczne">
-      <h2 id="listy-informatyczne">Listy informatyczne</h2>
-
-      <fieldset>
-        <legend>Wyliczenia</legend>
-        <h3>Sprzęt komputerowy</h3>
-        <ul class="list-square">
-          <li>Procesor wykonuje instrukcje programów.</li>
-          <li>Pamięć RAM przechowuje dane potrzebne podczas pracy.</li>
-          <li>Dysk SSD zapisuje pliki i system operacyjny.</li>
-        </ul>
-
-        <h3>Elementy sieci</h3>
-        <ul class="list-disc">
-          <li>Router kieruje dane między sieciami.</li>
-          <li>Przełącznik łączy urządzenia w sieci lokalnej.</li>
-          <li>Karta sieciowa umożliwia połączenie z siecią.</li>
-        </ul>
-
-        <h3>Zasady bezpieczeństwa</h3>
-        <ul class="list-circle">
-          <li>Używaj długich i unikatowych haseł.</li>
-          <li>Aktualizuj system oraz aplikacje.</li>
-          <li>Nie otwieraj podejrzanych załączników.</li>
-        </ul>
-      </fieldset>
-
-      <fieldset>
-        <legend>Numerowania</legend>
-        <h3>Etapy tworzenia programu</h3>
-        <ol class="list-decimal">
-          <li>Określ problem i wymagania.</li>
-          <li>Zaprojektuj rozwiązanie.</li>
-          <li>Napisz oraz przetestuj kod.</li>
-        </ol>
-
-        <h3>Przykładowe języki programowania</h3>
-        <ol class="list-alpha">
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>C++</li>
-        </ol>
-
-        <h3>Uruchamianie aplikacji</h3>
-        <ol class="list-roman">
-          <li>Uruchom środowisko programistyczne.</li>
-          <li>Otwórz projekt.</li>
-          <li>Włącz program i sprawdź wynik.</li>
-        </ol>
-      </fieldset>
-
-      <fieldset>
-        <legend>Struktura projektu</legend>
-        <ol class="nested-level-one">
-          <li>
-            Projekt strony internetowej
-            <ol class="nested-level-two">
-              <li>
-                Pliki źródłowe
-                <ul class="nested-level-three">
-                  <li>index.html</li>
-                  <li>style.css</li>
-                </ul>
-              </li>
-              <li>
-                Zasoby
-                <ul class="nested-level-three">
-                  <li>obrazy</li>
-                  <li>ikony</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-          <li>
-            Publikowanie witryny
-            <ol class="nested-level-two">
-              <li>
-                Sprawdzenie poprawności
-                <ul class="nested-level-three">
-                  <li>Walidacja kodu HTML</li>
-                  <li>Test działania odnośników</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-        </ol>
-      </fieldset>
-    </section>
-
-    <p>© &amp; &lt; &gt; &quot; € §</p>
+    </main>
   </body>
 </html>
